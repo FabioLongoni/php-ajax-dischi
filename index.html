@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&family=Open+Sans:wght@300;400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
   <script src='https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js'></script>
   <meta charset="UTF-8">
@@ -10,14 +14,18 @@
 </head>
 <body>
   <div id="app">
-    <h1>{{ title }}</h1>
-    <div class="card">
-      <div v-for="disco in dischi" class="card__content">
-        <img :src="disco.poster" alt="">
-        <h3 class="album">{{ disco.title }}</h3>
-        <div class="info__album">
-          <div class="author">{{ disco.author }}</div>
-          <div class="year">{{ disco.year }}</div>
+    <header>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Spotify_icon.png" alt="">
+    </header>
+    <div class="container">
+      <div v-for="disco in dischi" class="card">
+        <div  class="card__content">
+          <img :src="disco.poster" alt="">
+          <h3 class="album">{{ disco.title }}</h3>
+          <div class="info__album">
+            <div class="author">{{ disco.author }}</div>
+            <div class="year">{{ disco.year }}</div>
+          </div>
         </div>
       </div>
     </div>

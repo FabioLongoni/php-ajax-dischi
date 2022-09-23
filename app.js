@@ -8,7 +8,7 @@ const app = new Vue({
   methods: {
     fetchDischi() {
       axios
-        .get('https://flynn.boolean.careers/exercises/api/array/music')
+        .get('http://localhost/ex%20n44%20PHP%20API%20DISCHI/php-ajax-dischi/api/dischi.php')
         .then((res) => {
           const { response } = res.data
           this.dischi = response

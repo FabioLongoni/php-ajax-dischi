@@ -1,4 +1,12 @@
 <?php
+
+include __DIR__.'/../dataBase/dischi.php';
+
+$res = [
+  'success' => true,
+  'response' => $dischi
+];
+
 header('Content-Type: application/json');
 
-echo json_encode('https://flynn.boolean.careers/exercises/api/array/music');
+echo json_encode($res);
