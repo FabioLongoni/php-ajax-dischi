@@ -16,9 +16,11 @@
   <div id="app">
     <header>
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Spotify_icon.png" alt="">
+      <input type="text" v-model="onSearch">
     </header>
     <div class="container">
-      <div v-for="disco in dischi" class="card">
+      <div v-for="disco in dischi" class="card"
+        v-if="disco.title.toLowerCase().includes(onSearch)">
         <div  class="card__content">
           <img :src="disco.poster" alt="">
           <h3 class="album">{{ disco.title }}</h3>

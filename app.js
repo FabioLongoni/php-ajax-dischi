@@ -2,8 +2,8 @@
 const app = new Vue({
   el: '#app',
   data: {
-    title: 'hello',
     dischi: [],
+    onSearch: '',
   },
   methods: {
     fetchDischi() {
